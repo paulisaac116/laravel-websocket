@@ -1,8 +1,5 @@
 <?php
 
-use App\Events\Test;
-use App\Livewire\Test\TestComp;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,18 +15,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
-
-// Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-
-Route::get('/broadcast', function () {
-    broadcast(new Test());
-});
-
-
-Route::get('/test', function () {
-    return view('livewire.test.index');
 });
